@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能问答系统 - AI助手</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部标题栏 -->
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="avatar-container">
+                        <div class="avatar-pulse"></div>
+                        <div class="avatar-icon">🤖</div>
+                    </div>
+                    <div class="header-text">
+                        <h1>智能问答系统</h1>
+                        <p class="subtitle">AI助手 · 文本分析 · 智能翻译</p>
+                    </div>
+                </div>
+                <div class="header-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">在线</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 消息区域 -->
+        <main class="chat-main">
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-message">
+                    <div class="welcome-icon">✨</div>
+                    <h2>欢迎使用智能问答系统</h2>
+                    <p>我可以帮您：</p>
+                    <div class="feature-tags">
+                        <span class="tag">💬 智能问答</span>
+                        <span class="tag">📊 文本分类</span>
+                        <span class="tag">😊 情感分析</span>
+                        <span class="tag">🌐 机器翻译</span>
+                    </div>
+                    <p class="hint">直接输入问题即可，系统会自动识别您的意图</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- 输入区域 -->
+        <footer class="chat-footer">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="输入您的问题或需要处理的内容..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendButton" class="send-button" type="button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-hint">
+                    <span>💡 提示：输入"翻译"、"情感"、"分类"等关键词可触发相应功能</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 加载动画模板 -->
+    <template id="loadingTemplate">
+        <div class="message message-bot loading-message">
+            <div class="message-avatar">
+                <div class="avatar-icon-small">🤖</div>
+            </div>
+            <div class="message-content">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
